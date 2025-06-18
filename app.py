@@ -37,8 +37,13 @@ def evaluate_lab_value(lab_name, value):
     evaluation = "Normal"
 
     def within_range(val, range_str):
-        range_str = range_str.replace(",", "")
-        if "–" in range_str:
+        range_str = (
+        range_str.replace(",", "")
+                 .replace("–", "-")
+                 .replace("—", "-")
+                 .replace("−", "-")
+    )
+        if "-" in range_str:
             low, high = map(float, range_str.split("–"))
             return low <= val <= high
         elif "-" in range_str:
