@@ -212,20 +212,11 @@
     ],
     "source": "Abnormal Lab Follow-Up Guide"
   },
-  "ALT / AST": {
-    "thresholds": [
-      {
-        "severity": "Mild",
-        "threshold": "ALT/AST <3x upper limit of normal\n- Moderate: 3\u201310x ULN\n- Severe: >10x ULN \ud83d\udc69\u200d\u2695\ufe0f Referral Threshold\n- Refer to hepatology if ALT/AST persistently elevated >3x ULN or unexplained"
-      }
-    ],
-    "source": "Abnormal Lab Follow-Up Guide"
-  },
   "Alkaline Phosphatase": {
     "thresholds": [
       {
         "severity": "Mild",
-        "threshold": "up to 2x ULN\n- Moderate to Severe: >2x ULN \ud83d\udc69\u200d\u2695\ufe0f Referral Threshold\n- Hepatology referral if persistent elevation with no clear source"
+        "threshold": "0\u2013240"
       }
     ],
     "source": "Abnormal Lab Follow-Up Guide"
@@ -290,5 +281,65 @@
   "D-Dimer, Troponin, Most Panels": {
     "thresholds": [],
     "source": "Abnormal Lab Follow-Up Guide"
+  },
+  "AST": {
+    "thresholds": [
+      {
+        "severity": "Normal",
+        "threshold": "0\u201335"
+      },
+      {
+        "severity": "Mild",
+        "threshold": "36\u2013105"
+      },
+      {
+        "severity": "Moderate",
+        "threshold": "106\u2013350"
+      },
+      {
+        "severity": "Severe",
+        "threshold": ">350"
+      }
+    ],
+    "follow_up": [
+      {
+        "condition": "elevated",
+        "next_steps": [
+          "Repeat test in 1\u20132 weeks to confirm elevation.",
+          "Evaluate for viral hepatitis, alcohol use, medications, or muscle injury.",
+          "If >10x ULN or symptoms present, consider hepatology referral."
+        ]
+      }
+    ]
+  },
+  "ALT": {
+    "thresholds": [
+      {
+        "severity": "Normal",
+        "threshold": "0\u201345"
+      },
+      {
+        "severity": "Mild",
+        "threshold": "46\u2013135"
+      },
+      {
+        "severity": "Moderate",
+        "threshold": "136\u2013450"
+      },
+      {
+        "severity": "Severe",
+        "threshold": ">450"
+      }
+    ],
+    "follow_up": [
+      {
+        "condition": "elevated",
+        "next_steps": [
+          "Assess risk factors: alcohol, medications, hepatitis risk.",
+          "Order hepatitis panel, ultrasound if persistent.",
+          "If ALT >10x ULN or jaundice present, refer to hepatology."
+        ]
+      }
+    ]
   }
 }
